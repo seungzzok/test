@@ -23,7 +23,7 @@ export default function Graph() {
     },
   };
 
-  const data = [
+  const lineData = [
     {
       id: "japan",
       color: "hsl(83, 70%, 50%)",
@@ -296,6 +296,39 @@ export default function Graph() {
     },
   ];
 
+  const pieData = [
+    {
+      id: "go",
+      label: "go",
+      value: 259,
+      color: "hsl(32, 70%, 50%)",
+    },
+    {
+      id: "stylus",
+      label: "stylus",
+      value: 293,
+      color: "hsl(202, 70%, 50%)",
+    },
+    {
+      id: "scala",
+      label: "scala",
+      value: 374,
+      color: "hsl(219, 70%, 50%)",
+    },
+    {
+      id: "c",
+      label: "c",
+      value: 435,
+      color: "hsl(259, 70%, 50%)",
+    },
+    {
+      id: "python",
+      label: "python",
+      value: 32,
+      color: "hsl(282, 70%, 50%)",
+    },
+  ];
+
   return (
     <>
       <div style={{ width: "800px", height: "500px", margin: "0 auto" }}>
@@ -444,11 +477,7 @@ export default function Graph() {
           /**
            * chart에 사용될 데이터
            */
-          data={[
-            { id: "cola", value: 324 },
-            { id: "cidar", value: 88 },
-            { id: "fanta", value: 221 },
-          ]}
+          data={pieData}
           /**
            * chart margin
            */
@@ -551,7 +580,7 @@ export default function Graph() {
       </div>
       <div style={{ width: "800px", height: "500px", margin: "50px auto" }}>
         <ResponsiveLine
-          data={data}
+          data={lineData}
           margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
           xScale={{ type: "point" }}
           yScale={{
